@@ -1,0 +1,30 @@
+from math import *
+
+f = open('AstronomicalData.dat', 'r')
+Erro = open('ErroAstronomical.dat', 'w')
+PName = open('Names.dat', 'w')
+i=0
+Planets = []
+for line in f:
+	Planets.append(line.rstrip('\n').split(','))
+
+NOME = 0
+ORBI = 2
+DIST = 3
+PERI = 4
+for P1 in Planets:
+	erro1 = []
+	if (P1[DIST] != '-' or P1[PERI] != '-'):
+		PName.write(str(P1[NOME])+'\n')
+		for P2 in Planets:
+			if (P2[DIST] != '-' or P2[PERI] != '-'):
+				D1 = float(P1[DIST])
+				D2 = float(P2[DIST])
+				T1 = float(P1[PERI])
+				T2 = float(P2[PERI])
+				erro1.append( str( sqrt( pow( pow(T1,2)/pow(D1,3) - pow(T2,2)/pow(D2,3),2)))+'\t')
+	erro1.append('\n')
+	Erro.writelines(erro1)
+Erro.close()
+f.close()
+PName.close()

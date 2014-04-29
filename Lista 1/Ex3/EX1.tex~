@@ -1,0 +1,27 @@
+\documentclass[a4paper,12pt]{article}
+	\usepackage{graphicx}
+ 	\usepackage[brazil]{babel}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\title{ Mecânica Clássica I}
+	\author{\small André Del Bianco Giuffrida\\ \small IFSC - USP\\ \small andre.giuffrida@usp.br}
+	\date{}
+\begin{document}
+\maketitle
+	Para um barco de massa m e velocidade inicial Vo, onde atua a força:
+		\[ F(t)= -b e^{\alpha V(t)}\]
+		
+	Podemos calcular $V(t)$ e também $x(t)$ do seguinte modo:
+	
+		\[ m \frac{dv}{dt} = -b e^{\alpha v} \]
+		\[ m dv = -b e^{\alpha v} dt\]
+		juntando as variáveis comuns
+		\[ e^{-\alpha v} dv = \frac{-b}{m}  dt\]
+		\[ \int_{v_0}^{v(t)} e^{-\alpha v} dv = \int_0^t \frac{-b}{m}  dt'\]
+		\[ -\frac{1}{\alpha} e^{-\alpha v} \Bigg|_{v_0}^{v(t)}= \frac{-b}{m} t \]
+		\[ e^{-\alpha v(t)} - e^{-\alpha v_0}= \frac{-b \alpha}{m} t \]
+		\[ v(t) = -\frac{ln(\frac{-b \alpha}{m} t + e^{-\alpha v_0} ) }{\alpha } \]
+		
+		
+
+	\end{document}

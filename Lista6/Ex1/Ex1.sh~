@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gnuplot EX1o0.gp
+pdflatex EX1.tex

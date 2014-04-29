@@ -1,0 +1,5 @@
+set terminal latex
+set output "plot.tex"
+
+set title "This is a plot of $y=\sin(x)^2$"
+plot [0:6.28] [0:1] sin(x)**2 notitle

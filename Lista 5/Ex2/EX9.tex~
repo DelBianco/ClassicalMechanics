@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{exam}
+	\usepackage{graphicx}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{listings}
+	\usepackage{color}
+	\usepackage{amsmath}
+	\usepackage{enumerate}
+	\usepackage{caption}
+	\usepackage{subcaption}
+	\definecolor{dkgreen}{rgb}{0,0.6,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+	\lstset{frame=tb,
+	  language=Python,
+	  aboveskip=3mm,
+	  belowskip=3mm,
+	  showstringspaces=false,
+	  columns=flexible,
+	  basicstyle={\small\ttfamily},
+	  numbers=none,
+	  numberstyle=\tiny\color{gray},
+	  keywordstyle=\color{blue},
+	  commentstyle=\color{dkgreen},
+	  stringstyle=\color{mauve},
+	  breaklines=true,
+	  breakatwhitespace=true
+	  tabsize=3
+	}
+
+\begin{document}
+\begingroup 
+	  \bf \Large Mecânica Clássica I\\
+	  \indent \normalsize André Del Bianco Giuffrida
+	\endgroup
+	\\ \quad
+	\\
+	Um foguete acha-se em órbita elíptica em torno da Terra, perigeu $r_1$, apogeu $r_2$, medidos a partir do centro da Terra. Em certo ponto de sua órbita, o motor é ligado durante um tempo curto para fornecer um acréscimo $\Delta v$ na velocidade que coloca o foguete em órbita e que permite escapar à velocidade $v_0$ relativa à terra. Mostre que $\Delta v$ é um mínimo, se o impulso for aplicado no perigeu e paralelo a velocidade orbital. Determine $\Delta v$ para este caso, em termo dos parâmetros da orbita elíptica $\epsilon$ e $a$; a aceleração $g$; a distância $R$ do centro da Terra e a velocidade final $v_0$. Você pode explicar sob as leis da Física porque $\Delta v$ será tanto menor quanto maior for $\epsilon$?
+	\\
+	\\
+	Sendo :
+	\[\vec{v} = \dot r \hat r + r \dot\theta \hat \theta \quad \text{,} \quad r(\theta) = \frac{a(1-\epsilon^2) }{1+\epsilon cos(\theta)} \quad \text{,} \quad \dot r = \frac{a(1-\epsilon^2) sin(\theta) \dot\theta}{(1+\epsilon cos(\theta))^2}\]
+	
+	\end{document}

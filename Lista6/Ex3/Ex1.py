@@ -1,0 +1,79 @@
+from math import *
+import sys
+
+g  = 9.8
+
+A = B = C =1
+
+
+def q(t):
+
+	A = B = C =1
+	ddot = 25*g/32
+	
+	return 0.5 + ddot*pow(t,2)/2
+	
+def q1(t):
+	
+	A = B = C =1
+	ddot = 19*g/32
+	return 0.5 + ddot*pow(t,2)/2
+		
+def q2(t):
+	
+	A = B = C =1
+	ddot = -g/32
+	return 0.5 + ddot*pow(t,2)/2
+		
+
+
+if len(sys.argv) > 1:
+	param = sys.argv[1]
+
+	if param == 'q':
+		for i in range(0,300):
+			t = i*0.001
+			print t,q(t)
+		
+	if param == 'q1':
+		for i in range(0,300):
+			t = i*0.001
+			print t,q1(t)
+		
+	if param == 'q2':
+		for i in range(0,300):
+			t = i*0.001
+			print t,q2(t)
+
+	if param == 'x1':
+		for i in range(0,300):
+			t = i*0.001
+			Q  = q(t)
+			Q1 = q1(t)
+			c = Q + Q1
+			print t,c
+		
+	if param == 'x2':
+		for i in range(0,300):
+			t = i*0.001
+			Q  = q(t)
+			Q1 = q1(t)
+			c = Q - Q1 + B
+			print t, c
+			
+	if param == 'x3':
+		for i in range(0,300):
+			t = i*0.001
+			Q  = q(t)
+			Q2 = q2(t)
+			c = A + C - Q - Q2
+			print t, c
+			
+	if param == 'x4':
+		for i in range(0,300):
+			t = i*0.001
+			Q  = q(t)
+			Q2 = q2(t)
+			c = A - Q + Q2
+			print t, c
+

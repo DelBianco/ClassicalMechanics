@@ -1,0 +1,10 @@
+from math import *
+import sys
+
+##Runge Kutta de 4a Ordem
+def f(t,y):
+        return 
+
+dy = f(t,y) 
+y(t0) = y0
+
